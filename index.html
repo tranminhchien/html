@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        .boob{
+            cursor:pointer;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+        <img src="./body_head.png" >
+    </div>
+    <div id="bottom">
+        <img src="./body_left.png" class="boob" id="left_boob">
+        <img src="./body_right.png" class="boob" id="right_boob">
+    </div>
+    <span id="status">Chạm vào</span>
+    <script>
+        function play(){
+            const audio = new Audio('167338__willy-ineedthatapp-com__pup-fat.mp3');
+            audio.play();
+        }
+        const rightBoobs = document.querySelector('#right_boob');
+        const leftBoobs = document.querySelector('#left_boob');
+        const status = document.querySelector('#status');
+        rightBoobs.onclick = () => {
+            play();
+            rightBoobs.style.top = '-50px';
+            setTimeout(()=> {
+            rightBoobs.style.top = '0px';
+            },500);
+        }
+        leftBoobs.onclick = () => {
+            play();
+            leftBoobs.style.top = '-50px';
+            setTimeout(()=> {
+            leftBoobs.style.top = '0px';
+            },500);
+        }
+        rightBoobs.onmouseover = () => {          
+            rightBoobs.style.width = '800px';
+            status.innerText = "Bỏ tay ra";
+        }
+        rightBoobs.onmouseleave = () => {          
+            rightBoobs.style.width = '438px';
+            status.innerText = "Chạm vào";
+        }
+        leftBoobs.onmouseover = () => {
+            leftBoobs.style.width = '600px';
+            status.innerText = "Bỏ tay ra";
+        }
+        leftBoobs.onmouseleave = () => {
+            leftBoobs.style.width = '340px';
+            status.innerText = "Chạm vào";
+        }
+    </script>
+</body>
+</html>
