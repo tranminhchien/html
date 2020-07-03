@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         body{
-            margin: 0px;
+            margin: 0px;  
         }
         .boob{
             cursor:pointer;
@@ -16,11 +16,11 @@
 </head>
 <body>
     <div id="head">
-        <img src="./body_head.png" >
+        <img src="./body_head.png" width="375px" >
     </div>
     <div id="bottom">
-        <img src="./body_left.png" class="boob" id="left_boob">
-        <img src="./body_right.png" class="boob" id="right_boob">
+        <img src="./body_left.png" class="boob" id="left_boob" width="170px">
+        <img src="./body_right.png" class="boob" id="right_boob" width="200px" height="194px">
     </div>
     <span id="status">Chạm vào</span>
     <script>
@@ -46,19 +46,19 @@
             },500);
         }
         rightBoobs.onmouseover = () => {          
-            rightBoobs.style.width = '800px';
+            rightBoobs.style.top = '-30px';
             status.innerText = "Bỏ tay ra";
         }
         rightBoobs.onmouseleave = () => {          
-            rightBoobs.style.width = '438px';
+            rightBoobs.style.top = '0px';
             status.innerText = "Chạm vào";
         }
         leftBoobs.onmouseover = () => {
-            leftBoobs.style.width = '600px';
+            leftBoobs.style.top = '-30px';
             status.innerText = "Bỏ tay ra";
         }
         leftBoobs.onmouseleave = () => {
-            leftBoobs.style.width = '340px';
+            leftBoobs.style.top = '0px';
             status.innerText = "Chạm vào";
         }
     </script>
